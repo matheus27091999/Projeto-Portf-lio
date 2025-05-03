@@ -42,5 +42,5 @@
  
  Esse projeto está sob a licença MIT.
  
- ---
+ 
  
