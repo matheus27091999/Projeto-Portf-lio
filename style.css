@@ -4,13 +4,37 @@
     box-sizing: border-box;
 }
 
+:root{
+    --text-color:#7fffd4;
+    --bg-url:url(./assets/mobile.png);
+    --stroke-color:#7fffd4;
+    --surface-color:linear-gradient(135deg, rgba(0, 0, 0, 0.5), rgba(32, 32, 32, 0.5));
+    --surface-color-hover:linear-gradient(135deg, rgba(127, 255, 212, 0.2), rgba(0, 0, 0, 0.1));
+    --highlight-color:rgba(0, 0, 0, 0.3);
+    --box-shadown-color: 0 0 8px #7fffd4;
+
+   
+    
+}
+
+.light{
+    --text-color: #000000 ;
+    --bg-url:url(assets/mobile-ligth.png);
+    --stroke-color:#000000;
+    --surface-color:linear-gradient(135deg, rgba(255, 255, 255, 100), rgba(220, 220, 220, 50));
+    --surface-hover: linear-gradient(135deg, rgba(245, 245, 245, 1), rgba(200, 200, 200, 0.7));
+    --highlight-color:linear-gradient(135deg, rgba(245, 245, 245, 1), rgba(200, 200, 200, 0.7));
+    --box-shadown-color: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+
+}
+
 body {
-    background: url(./assets/mobile.png) no-repeat top center/cover;
+    background: var(--bg-url) no-repeat top center/cover;
 }
 
 body * {
     font-family: 'Poppins', sans-serif;
-    color: #7fffd4;
+    color: var(--text-color);
 }
 
 #container {
@@ -88,8 +112,8 @@ ul li a {
 
     padding: 16px 24px;
 
-    background: linear-gradient(135deg, rgba(0, 0, 0, 0.5), rgba(32, 32, 32, 0.5));
-    border: 1px solid rgba(0, 0, 0, 1);
+    background: var(--surface-color);
+    border: 1.2px solid var(--stroke-color);
     border-radius: 8px;
 
     -webkit-backdrop-filter: blur(4px);
@@ -102,8 +126,8 @@ ul li a {
 }
 
 ul li a:hover {
-    background: linear-gradient(135deg, rgba(127, 255, 212, 0.2), rgba(0, 0, 0, 0.1));
-    border: 1.5px solid rgba(0, 0, 0, 0.5);
+    background: var(--surface-hover);
+    border: 1.2px solid var(--stroke-color);
     transform: scale(1.05);
 }
 
@@ -131,9 +155,9 @@ ul li a:hover {
 }
 
 #social-links a:hover {
-    background: rgba(0, 0, 0, 0.3);
+    background: var(--highlight-color);
     transform: scale(1.05);
-    box-shadow: 0 0 8px #7fffd4;
+    box-shadow: var(--box-shadown-color);
 }
 
 footer{
@@ -142,3 +166,4 @@ footer{
     font-weight: 500;
     font-size: 20px;
 }
+
