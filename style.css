@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url(./assets/mobile.png) no-repeat top center/cover;
+}
+
+body * {
+    font-family: 'Poppins', sans-serif;
+    color: #7fffd4;
+}
+
+#container {
+    width: 360px;
+    margin: 56px auto 0px;
+    
+    /* Fade-in geral */
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#profile {
+    text-align: center;
+    padding: 24px;
+    
+    /* Fade-in individual */
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease forwards;
+    animation-delay: 0.1s;
+}
+
+#profile img {
+    width: 112px;
+}
+
+#profile p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 8px;
+}
+
+ul {
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    padding: 24px 0;
+}
+
+ul li {
+    /* Fade-in para cada item */
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+ul li:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+ul li:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+ul li:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+ul li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 16px 24px;
+
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.5), rgba(32, 32, 32, 0.5));
+    border: 1px solid rgba(0, 0, 0, 1);
+    border-radius: 8px;
+
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+
+    text-decoration: none;
+    font-weight: 500;
+
+    transition: background 0.3s, transform 0.3s;
+}
+
+ul li a:hover {
+    background: linear-gradient(135deg, rgba(127, 255, 212, 0.2), rgba(0, 0, 0, 0.1));
+    border: 1.5px solid rgba(0, 0, 0, 0.5);
+    transform: scale(1.05);
+}
+
+#social-links {
+    display: flex;
+    justify-content: center;
+    padding: 24px;
+    font-size: 24px;
+
+    /* Fade-in */
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.6s ease forwards;
+    animation-delay: 0.8s;
+}
+
+#social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+    border-radius: 50%;
+}
+
+#social-links a:hover {
+    background: rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+    box-shadow: 0 0 8px #7fffd4;
+}
+
+footer{
+    padding: 24px 0;
+    text-align: center;
+    font-weight: 500;
+    font-size: 20px;
+}
