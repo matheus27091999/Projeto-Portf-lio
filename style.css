@@ -214,5 +214,14 @@ footer {
     color: var(--text-color);
     
 }
-  
+
+@media (min-wdthe:1920px){
+    :root{
+        --bg-url: url(url(assets/descktop.png));
+    }
+
+    .light{
+        --bg-url: ulr (url(assets/mobile-ligth.png));
+    }
+}
  
